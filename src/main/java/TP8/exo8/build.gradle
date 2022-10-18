@@ -1,0 +1,32 @@
+plugins {
+    id 'java-library'
+    id 'io.quarkus' version "${quarkus_gradle_plugins}"
+}
+project(":demo"){
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+  //quarkus
+	implementation group: 'io.quarkus', name: 'quarkus-resteasy', version: quarkusVersion
+	implementation group: 'io.quarkus', name: 'quarkus-resteasy-jackson', version: quarkusVersion
+	implementation group: 'io.quarkus', name: 'quarkus-hibernate-orm', version: quarkusVersion
+	implementation group: 'io.quarkus', name: 'quarkus-jdbc-mariadb', version: quarkusVersion
+    // Use JUnit Jupiter for testing.
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    
+    #db
+	quarkus.datasource.db-kind=mariadb 
+	quarkus.datasource.username=user 
+	quarkus.datasource.password=my-secret
+	quarkus.datasource.jdbc.url=jdbc:mariadb://localhost:3306/database
+	quarkus.datasource.jdbc.max-size=16
+	quarkus.hibernate-orm.database.generation=drop-and-create
+}
+
+
+test {
+    useJUnitPlatform()
+}
+}

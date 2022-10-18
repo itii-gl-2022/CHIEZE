@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="TP5">
+            
+    
+    <wb-module deploy-name="TP5.Corentin">
+                        
+        
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+                        
+        
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-        <property name="context-root" value="TP5"/>
-        <property name="java-output-path" value="/TP5/build/classes"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/TP8"/>
+                        
+        
+        <property name="java-output-path" value="/TP5.Corentin/build/classes"/>
+                
+        <property name="context-root" value="TP5.Corentin"/>
+                    
+    
     </wb-module>
+        
+
 </project-modules>

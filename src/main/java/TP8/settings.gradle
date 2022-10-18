@@ -1,0 +1,5 @@
+rootProject.name = 'form10-j3-tp'
+
+include('demo')
+include('exo7')
+include('exo8')
